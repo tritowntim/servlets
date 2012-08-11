@@ -18,6 +18,11 @@
 		<servlet-class>com.tritowntim.simple.CoffeeServlet</servlet-class>
 	</servlet>
 
+	<servlet>
+		<servlet-name>Redirector</servlet-name>
+		<servlet-class>com.tritowntim.simple.RedirectorServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>Simple</servlet-name>
 		<url-pattern>/typical</url-pattern>
@@ -31,6 +36,11 @@
 	<servlet-mapping>
 		<servlet-name>Coffee</servlet-name>
 		<url-pattern>/order-coffee</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Redirector</servlet-name>
+		<url-pattern>/redirector</url-pattern>
 	</servlet-mapping>
 
 </web-app>
