@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class SimpleServlet extends HttpServlet { 
+public class OtherServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public class SimpleServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		Date today = new Date();
-		String title = "Simple Servlet";
+		String title = "Other Servlet";
 		
 		StringBuffer res = new StringBuffer();
 		res.append("<html>");

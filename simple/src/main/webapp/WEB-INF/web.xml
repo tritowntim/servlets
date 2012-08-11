@@ -4,14 +4,33 @@
 	version="2.4">
 
 	<servlet>
-		<servlet-name>Simple Servlet</servlet-name>
+		<servlet-name>Simple</servlet-name>
 		<servlet-class>com.tritowntim.simple.SimpleServlet</servlet-class>
 	</servlet>
 	
-	<servlet-mapping>
-		<servlet-name>Simple Servlet</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+	<servlet>
+		<servlet-name>Other</servlet-name>
+		<servlet-class>com.tritowntim.simple.OtherServlet</servlet-class>
+	</servlet>
 	
+	<servlet>
+		<servlet-name>Coffee</servlet-name>
+		<servlet-class>com.tritowntim.simple.CoffeeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Simple</servlet-name>
+		<url-pattern>/typical</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Other</servlet-name>
+		<url-pattern>/weird</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Coffee</servlet-name>
+		<url-pattern>/order-coffee</url-pattern>
+	</servlet-mapping>
 
 </web-app>
