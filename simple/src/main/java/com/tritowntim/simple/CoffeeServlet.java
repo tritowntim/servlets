@@ -19,6 +19,7 @@ public class CoffeeServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		String brand = request.getParameter("brand");
+		String [] extras = request.getParameterValues("extra");
 		Date today = new Date();
 		String title = "Coffee Ordering";
 		
@@ -30,6 +31,16 @@ public class CoffeeServlet extends HttpServlet {
 		res.append(p(today.toLocaleString()));
 		res.append(p(request.getRequestURI()));
 		res.append(p("Coffee selection: " + brand));
+		if (extras != null && extras.length > 0) {
+			String extrasText = "";
+			for (int i = 0; i<extras.length; i++) {
+				if (extrasText.length() > 0) {
+					extrasText += ", ";
+				}
+				extrasText += extras[i];
+			}
+			res.append(p("plus " + extrasText));			
+		}
 		res.append("</body>");
 		res.append("</html>");
 
