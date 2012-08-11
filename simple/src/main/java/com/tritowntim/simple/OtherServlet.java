@@ -25,11 +25,12 @@ public class OtherServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		PrintWriter out = response.getWriter();
-		Date today = new Date();
 		String title = "Other Servlet";
+		Date today = new Date();
 		int thread = Thread.currentThread().hashCode();
-		
+		int serverPort = request.getServerPort();
+		int localPort = request.getLocalPort();
+		int remotePort = request.getRemotePort();
 		
 		StringBuffer res = new StringBuffer();
 		res.append("<html>");
@@ -40,8 +41,11 @@ public class OtherServlet extends HttpServlet {
 		res.append(p("thread " + thread));
 		res.append(p("original object " + objectID + " initialized at " + initializedAt.toLocaleString()));
 		res.append(p("this object " + this.hashCode() + " accessed at " + today.toLocaleString()));
+		res.append(p("ports: remote = " + remotePort + ", server = " + serverPort + ", local = " + localPort));
 		res.append("</body>");
 		res.append("</html>");
+
+		PrintWriter out = response.getWriter();
 		out.println(res.toString());
 		
 	}
