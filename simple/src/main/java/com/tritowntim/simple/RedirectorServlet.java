@@ -18,7 +18,7 @@ public class RedirectorServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		response.sendRedirect("/redirected.html");
+		response.sendRedirect("redirected.html");
 		
 	}
 	
