@@ -31,6 +31,8 @@ public class OtherServlet extends HttpServlet {
 		int serverPort = request.getServerPort();
 		int localPort = request.getLocalPort();
 		int remotePort = request.getRemotePort();
+		String localIP = request.getLocalAddr();
+		String remoteIP = request.getRemoteAddr();
 		
 		StringBuffer res = new StringBuffer();
 		res.append("<html>");
@@ -42,6 +44,8 @@ public class OtherServlet extends HttpServlet {
 		res.append(p("original object " + objectID + " initialized at " + initializedAt.toLocaleString()));
 		res.append(p("this object " + this.hashCode() + " accessed at " + today.toLocaleString()));
 		res.append(p("ports: remote = " + remotePort + ", server = " + serverPort + ", local = " + localPort));
+		res.append(p("local IP = " + localIP));
+		res.append(p("remote IP = " + remoteIP));
 		res.append("</body>");
 		res.append("</html>");
 
