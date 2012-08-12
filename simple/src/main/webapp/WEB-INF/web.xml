@@ -70,4 +70,8 @@
 		<listener-class>com.tritowntim.simple.MyServletContextListener</listener-class>
 	</listener>
 
+	<listener>
+		<listener-class>com.tritowntim.simple.CountingServletRequestListener</listener-class>
+	</listener>
+
 </web-app>
