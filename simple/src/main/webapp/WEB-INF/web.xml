@@ -60,5 +60,14 @@
 		<servlet-name>InitParam</servlet-name>
 		<url-pattern>/initparam</url-pattern>
 	</servlet-mapping>
+	
+	<context-param>
+		<param-name>copyright</param-name>
+		<param-value>© Tim Dussinger</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>com.tritowntim.simple.MyServletContextListener</listener-class>
+	</listener>
 
 </web-app>

@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 public class CoffeeServlet extends HttpServlet { 
 	
 	private static final long serialVersionUID = 1L;
+	private String copyright = "";
+	
+	public void init() {
+		copyright = getServletContext().getInitParameter("copyright");
+	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		response.setContentType("text/html");
@@ -41,6 +46,7 @@ public class CoffeeServlet extends HttpServlet {
 			}
 			res.append(p("plus " + extrasText));			
 		}
+		res.append(p(copyright));
 		res.append("</body>");
 		res.append("</html>");
 

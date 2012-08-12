@@ -15,6 +15,7 @@ public class InitParamServlet extends HttpServlet {
 	private String email = "";
 	private String params = "";
 	private String paramValues = "";
+	private String copyright = "";
 	
 	public void init() {
 		Enumeration e = getInitParameterNames();
@@ -28,6 +29,10 @@ public class InitParamServlet extends HttpServlet {
 			paramValues += getInitParameter(paramName);
 		}
 		email = getInitParameter("email") + "...";		
+		copyright = getServletContext().getInitParameter("copyright");
+		
+		log("Generic Servlet log");
+		getServletContext().log("Servlet Context log");
 	}
 
 	private String p(String text) {
@@ -49,6 +54,8 @@ public class InitParamServlet extends HttpServlet {
 		res.append(p("email = " + email));
 		res.append(p("init parameter names = " + params));
 		res.append(p("init parameter values= " + paramValues));
+		res.append(p("app startup time = " + getServletContext().getAttribute("startupTime")) + ((Pojo) getServletContext().getAttribute("pojo")).toString() );
+		res.append(p(copyright));
 		res.append("</body>");
 		res.append("</html>");
 		out.println(res.toString());
