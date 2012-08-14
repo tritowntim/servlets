@@ -36,6 +36,11 @@
 		</init-param>
 	</servlet>
 
+	<servlet>
+		<servlet-name>Sess</servlet-name>
+		<servlet-class>com.tritowntim.simple.SessionServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>Simple</servlet-name>
 		<url-pattern>/typical</url-pattern>
@@ -59,6 +64,11 @@
 	<servlet-mapping>
 		<servlet-name>InitParam</servlet-name>
 		<url-pattern>/initparam</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Sess</servlet-name>
+		<url-pattern>/sess</url-pattern>
 	</servlet-mapping>
 	
 	<context-param>
