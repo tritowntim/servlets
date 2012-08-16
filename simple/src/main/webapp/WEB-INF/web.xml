@@ -41,6 +41,11 @@
 		<servlet-class>com.tritowntim.simple.SessionServlet</servlet-class>
 	</servlet>
 
+	<servlet>
+		<servlet-name>SessionEnd</servlet-name>
+		<servlet-class>com.tritowntim.simple.SessionEndServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>Simple</servlet-name>
 		<url-pattern>/typical</url-pattern>
@@ -71,9 +76,14 @@
 		<url-pattern>/sess</url-pattern>
 	</servlet-mapping>
 	
+	<servlet-mapping>
+		<servlet-name>SessionEnd</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
 	<context-param>
 		<param-name>copyright</param-name>
-		<param-value>© Tim Dussinger</param-value>
+		<param-value>Tim Dussinger</param-value>
 	</context-param>
 	
 	<listener>
