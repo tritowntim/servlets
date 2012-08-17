@@ -46,6 +46,11 @@
 		<servlet-class>com.tritowntim.simple.SessionEndServlet</servlet-class>
 	</servlet>
 
+	<servlet>
+		<servlet-name>CookieServlet</servlet-name>
+		<servlet-class>com.tritowntim.simple.CookieServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>Simple</servlet-name>
 		<url-pattern>/typical</url-pattern>
@@ -79,6 +84,11 @@
 	<servlet-mapping>
 		<servlet-name>SessionEnd</servlet-name>
 		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>CookieServlet</servlet-name>
+		<url-pattern>/cookie</url-pattern>
 	</servlet-mapping>
 	
 	<context-param>
