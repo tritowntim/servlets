@@ -5,6 +5,7 @@
 		<title>Counter</title>
 	</head>
 	<body>
-		<p>Counter = <%= Counter.count() %></p>
+		<p><%= Counter.introduce() %> <%= Counter.count() %></p>
+		<p><strong>${Counter.introduce}&nbsp;${Counter[count]}</strong></p>
 	</body>
 </html>
