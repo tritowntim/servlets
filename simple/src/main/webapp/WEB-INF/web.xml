@@ -101,6 +101,23 @@
 		<url-pattern>/el</url-pattern>
 	</servlet-mapping>
 	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>includes</web-resource-name>
+			<url-pattern>/includer.jsp</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>tomcat</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<!-- auth-method of BASIC or DIGEST works -->
+	<login-config>
+		<auth-method>DIGEST</auth-method>
+	</login-config>
+	
 	<context-param>
 		<param-name>copyright</param-name>
 		<param-value>Tim Dussinger</param-value>
